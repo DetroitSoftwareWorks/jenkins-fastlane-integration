@@ -1,5 +1,6 @@
 #!/bin/bash
 
+pushd "$(dirname $0)"
 mkdir -p fastlane
 pushd fastlane
 
@@ -34,4 +35,5 @@ ls -lathr fastlane-latest/
 
 # fastlane init
 
+popd
 popd
