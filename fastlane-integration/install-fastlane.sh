@@ -7,6 +7,8 @@ curl -fLO https://github.com/fastlane/fastlane/releases/latest
 RELEASE_PATH="$(grep /fastlane/fastlane latest | grep .zip | sed -e 's/^.*<a href="//g' -e 's/" rel="nofollow">.*$//g')"
 rm -f latest
 RELEASE_FILE="$(basename ${RELEASE_PATH})"
+echo "Release path: ${RELEASE_PATH}"
+echo "Release file: ${RELEASE_FILE}"
 
 if [[ ! -e ${RELEASE_FILE} ]]
 then
